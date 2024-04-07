@@ -1,0 +1,153 @@
+/* custom font */
+@font-face {
+  font-family: Absans;
+  src:  url('../fonts/Absans-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Coconat;
+  src:  url('../fonts/Coconat-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Noloice;
+  src:  url('../fonts/Noloice.woff2') format('woff2');
+}
+
+/* variables */
+:root {
+  --padding: 1.5rem;
+  --main-font-size: 1.2rem;
+  --color-grey: #333;
+  --color-light: #efefef;
+  --color-text: var(--color-grey);
+  --color-background: var(--color-light);
+  --font-family-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  /* --font-custom: "le-murmure", serif; */
+}
+
+html {
+  /* max-width: 70%; */
+  /* padding: var(--padding); */
+  padding: 0;
+  margin: 0;
+  color: var(--color-text);
+  font-size: var(--main-font-size);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-family-sans);
+  font-size: 115%;
+  background-color: var(--color-background);
+}
+
+
+h1 {
+  font-size: 1.3em;
+  /* margin-bottom: 5px; */
+  font-weight: normal;
+}
+
+
+p {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: row;
+  /* height: 100vh; */
+  /* background: linear-gradient(-45deg, #f28a19 , #fab855, #b4dedf, #396ab2); */
+  background: linear-gradient(-45deg, #f28a19 , #fab855, #b4dedf, #396ab2);
+  background-size: 200% 200%;
+  animation: gradient 35s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+  background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container .left {
+  font-family: "Noloice";
+  font-size: 7em;
+  line-height: 8rem;
+  width: 40%;
+  padding: 20px;
+}
+
+.container .left h1 {
+  margin: 0;
+
+  background: linear-gradient(to right, #b4dedf, #396ab2);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.container .right {
+  width: 60%;
+  font-family: "Absans";
+  margin-right: 10%;
+  margin-top: 50px;
+  color: #396ab2;
+  margin-bottom: 200px;
+}
+
+.container .right .citation {
+  font-family: "Coconat";
+  /* margin-top: 10px; */
+  /* margin-bottom: 20px; */
+  /* padding-right: 20%; */
+  padding-bottom: 5%;
+}
+
+.container .right .citation .signature {
+  font-size: 0.9em;
+}
+
+@media only screen and (min-width:920px) and (max-width: 1600px) {
+  .container .left {
+     width: 50%;
+  }
+
+  .container .right {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width:1px) and (max-width: 920px) {
+
+  html {
+    max-width: 100%;
+    /* padding: 20px; */
+    font-size: 1rem;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container .left {
+    font-size: 3em;
+    line-height: 3rem;
+     width: 100%;
+  }
+
+  .container .right {
+    width: 100%;
+    padding: 5px;
+  }
+
+}
