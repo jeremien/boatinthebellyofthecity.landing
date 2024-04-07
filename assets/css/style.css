@@ -45,14 +45,15 @@ body {
 
 
 h1 {
-  font-size: 1.3em;
+  /* font-size: 1.3em; */
   /* margin-bottom: 5px; */
   font-weight: normal;
+  margin-top: 20px;
 }
 
 
 p {
-  font-size: 1.3rem;
+  /* font-size: 1.3rem; */
   margin: 0;
 }
 
@@ -87,9 +88,9 @@ p {
   padding: 20px;
 }
 
+
 .container .left h1 {
   margin: 0;
-
   background: linear-gradient(to right, #b4dedf, #396ab2);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -104,16 +105,36 @@ p {
   margin-bottom: 200px;
 }
 
+.container .right em {
+  /* font-family: "Noloice"; */
+  font-style: normal;
+  /* text-decoration: underline; */
+  /* background: linear-gradient(to right, #b4dedf, #396ab2);;
+  color: #fab855; */
+  background: linear-gradient(to right, #b4dedf, #396ab2);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
 .container .right .citation {
   font-family: "Coconat";
+  font-size: 1.5em;
+  line-height: 1.2em;
+  padding-left: 10%;
   /* margin-top: 10px; */
   /* margin-bottom: 20px; */
   /* padding-right: 20%; */
-  padding-bottom: 5%;
+  padding-top: 5%;
+  padding-bottom: 2%;
+}
+
+.container .right h1 {
+  font-size: 2em;
+  font-family: Noloice;
 }
 
 .container .right .citation .signature {
-  font-size: 0.9em;
+  font-size: 0.9rem;
 }
 
 @media only screen and (min-width:920px) and (max-width: 1600px) {
